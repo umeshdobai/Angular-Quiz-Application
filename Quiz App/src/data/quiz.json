@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "question": "Inventor of c++?", 
+      "A": "Pavan.c", 
+      "B":"Bjarne Stroustrop", 
+      "C":"Richie Richie",
+      "D":"Amos.Emmanual", 
+      "E":"none",
+      "answer": "B"
+    },
+    {
+      "id": 2,
+       "question": "Inventor of java?", 
+       "A": "Nayan.c", 
+       "B":"Armesh", 
+       "C":"James Gosling", 
+       "D":"Kiran.DY", 
+       "E":"none",
+       "answer":"C"
+    },
+    {
+      "id": 3,  
+      "question": "Java is?", 
+      "A": "Platform Dependent", 
+      "B":"Platform Independent",
+      "C": "Object based language",
+      "D":"Procedural language",
+      "E": "none", 
+      "answer": "B"
+    }
+    
+]

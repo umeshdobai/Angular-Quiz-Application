@@ -1,0 +1,90 @@
+<div>
+    <div class="card" style="width: 90rem;">
+        <div class="card-header">
+                <h5>Review:</h5>
+        </div>
+        <div *ngFor="let item of quiz;let j=index"> 
+            <div *ngFor="let select of data;let i=index" >
+            <div *ngIf="i==j">
+                <div class="list-group-item"><b>{{item.id}}.&nbsp;{{item.question}}</b><br>
+                    
+                    <div *ngIf="select.value=='A'">
+                        <input type="radio" name="{{item.id}}" value="A" checked disabled>A.{{item.A}}<br>
+                        <input type="radio"name="{{item.id}}"  value="B" disabled>B.{{item.B}}<br>
+                        <input type="radio"name="{{item.id}}" value="C" disabled>C.{{item.C}}<br>
+                        <input type="radio"name="{{item.id}}" value="D" disabled>D.{{item.D}}<br>
+                        <input type="radio"name="{{item.id}}" value="E" disabled>E.{{item.E}}<br>
+                        <div *ngIf="select.value==item.answer">
+                            &#10004;
+                        </div> 
+                        <div *ngIf="select.value!=item.answer" >
+                            &#10006;
+                            <b>Correct answer is:{{item.answer}}</b>
+                        </div>
+                    </div>
+                    <div *ngIf="select.value=='B'" >
+                       <input type="radio" name="{{item.id}}" value="A" disabled>A.{{item.A}}<br>
+                        <input type="radio"name="{{item.id}}"  value="B"checked disabled>B.{{item.B}}<br>
+                        <input type="radio"name="{{item.id}}" value="C" disabled>C.{{item.C}}<br>
+                        <input type="radio"name="{{item.id}}" value="D" disabled>D.{{item.D}}<br>
+                        <input type="radio"name="{{item.id}}" value="E" disabled>E.{{item.E}}<br>
+                        <div *ngIf="select.value==item.answer">
+                            &#10004;
+                        </div>
+                        <div *ngIf="select.value!=item.answer" >
+                            &#10006;
+                            <b>Correct answer is:{{item.answer}}</b>
+                        </div>
+                    </div>
+                    <div *ngIf="select.value=='C'" >
+                       <input type="radio" name="{{item.id}}" value="A" disabled>A.{{item.A}}<br>
+                        <input type="radio"name="{{item.id}}"  value="B" disabled>B.{{item.B}}<br>
+                        <input type="radio"name="{{item.id}}" value="C" checked disabled>C.{{item.C}}<br>
+                        <input type="radio"name="{{item.id}}" value="D" disabled>D.{{item.D}}<br>
+                        <input type="radio"name="{{item.id}}" value="E" disabled>E.{{item.E}}<br>
+                        <div *ngIf="select.value==item.answer">
+                            &#10004;
+                        </div>
+                        <div *ngIf="select.value!=item.answer" >
+                            &#10006;
+                            <b>Correct answer is:{{item.answer}}</b>
+                        </div>
+                    </div>
+                    <div *ngIf="select.value=='D'" >
+                        <input type="radio" name="{{item.id}}" value="A" disabled>A.{{item.A}}<br>
+                        <input type="radio"name="{{item.id}}"  value="B" disabled>B.{{item.B}}<br>
+                        <input type="radio"name="{{item.id}}" value="C" disabled>C.{{item.C}}<br>
+                        <input type="radio"name="{{item.id}}" value="D" checked disabled>D.{{item.D}}<br>
+                        <input type="radio"name="{{item.id}}" value="E" disabled>E.{{item.E}}<br>
+                        <div *ngIf="select.value==item.answer">
+                            &#10004;
+                        </div>
+                        <div *ngIf="select.value!=item.answer" >
+                            &#10006;
+                            <b>Correct answer is:{{item.answer}}</b>
+                        </div>
+                    </div>
+                    <div *ngIf="select.value=='E'" >
+                        <input type="radio" name="{{item.id}}" value="A" disabled>A.{{item.A}}<br>
+                        <input type="radio"name="{{item.id}}"  value="B" disabled>B.{{item.B}}<br>
+                        <input type="radio"name="{{item.id}}" value="C" disabled>C.{{item.C}}<br>
+                        <input type="radio"name="{{item.id}}" value="D" disabled>D.{{item.D}}<br>
+                        <input type="radio"name="{{item.id}}" value="E" checked disabled>E.{{item.E}}<br>
+                       <div *ngIf="select.value==item.answer">
+                            &#10004;
+                        </div>
+                        <div *ngIf="select.value!=item.answer" >
+                            &#10006;
+                            <b>Correct answer is:{{item.answer}}</b>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h4 class="alert alert-info text-center">You may close this window now.</h4>
+</div>

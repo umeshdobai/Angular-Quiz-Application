@@ -1,0 +1,67 @@
+   <div class="login-form">
+   <form novalidate (ngSubmit)="save(regForm)" #regForm="ngForm">
+      
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8dC4oav1DwEVrfMD_52JyW7-fcN54hpiRxjud50wNuflzX1DhqA"height="200px" width="200px">
+         <h2 class="text-center">Login</h2>
+          <div class="input-group mb-3">
+            <div class="input-group-append">
+								<span class="input-group-text"><i class="fa fa-user"></i></span>
+							</div>
+            <input type="text" required
+                    class="form-control"
+                    id="username"
+                    placeholder="username" 
+                    minlength="3"
+                    name="username"
+                    [(ngModel)]=login.username
+                    #usernameVar="ngModel"
+                    [ngClass]="{'is-invalid':(usernameVar.touched||usernameVar.dirty)&& !usernameVar.valid }  " /> 
+                    <span class="invalid-feedback">
+                            <span *ngIf="usernameVar.errors?.required">
+                              Please enter your Username.
+                            </span>
+                            <span *ngIf="usernameVar.errors?.minlength">
+                              The Username must be longer than 3 characters.
+                            </span>
+                    </span>
+                    <!--<app-quiz [username]='login.username'></app-quiz>-->
+          </div>
+          <!--<app-quiz [username]='login.username'></app-quiz>-->
+          <div class="input-group mb-3">
+            <div class="input-group-append">
+								<span class="input-group-text"><i class="fa fa-key"></i></span>
+							</div>
+            <input type="password" required
+                    class="form-control"
+                    id="password"
+                    placeholder="Password" 
+                    minlength="5"
+                    name="password"
+                    [(ngModel)]=login.password
+                    #passwordVar="ngModel"
+                    [ngClass]="{'is-invalid':(passwordVar.touched||passwordVar.dirty)&& !passwordVar.valid }  " /> 
+                    <span class="invalid-feedback">
+                            <span *ngIf="passwordVar.errors?.required">
+                              Please enter Password.
+                            </span>
+                            <span *ngIf="passwordVar.errors?.minlength">
+                              The Password must be length of 5 .
+                            </span>
+                    </span>
+          </div>
+
+                          
+                          <div class="form-group">
+                                
+                                  <button class="btn btn-primary btn-block"
+                                          type="submit"
+                                           (click)=onSubmit()
+                                          [title]="regForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+                                          [disabled]="!regForm.valid">
+                                    Submit
+                                  </button>
+                                
+                          </div>
+</form>
+<p><font color="red">Please login to give Online Test!</font></p>
+</div>

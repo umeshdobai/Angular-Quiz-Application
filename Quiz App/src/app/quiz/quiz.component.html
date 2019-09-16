@@ -1,0 +1,27 @@
+<br>
+<form (ngSubmit)="save(regForm)" #regForm="ngForm" *ngIf="mode=='quiz'&& quiz">
+<div >
+<h1>Take Quiz:</h1>
+<h4>Welcome {{data}}</h4>
+</div>
+<div class="card" style="width: 90rem;">
+  <div class="card-header">
+    <h5>Questions:</h5>
+  </div>
+  
+  <div *ngFor="let item of quiz"> 
+          
+    <div class="list-group-item"><b>{{item.id}}.&nbsp;{{item.question}}</b><br>
+    <input type="radio" name="{{item.id}}" value="A" [(ngModel)]="item.selected">A.{{item.A}}<br>
+    <input type="radio"name="{{item.id}}"  value="B"[(ngModel)]="item.selected">B.{{item.B}}<br>
+    <input type="radio"name="{{item.id}}" value="C"[(ngModel)]="item.selected">C.{{item.C}}<br>
+    <input type="radio"name="{{item.id}}" value="D"[(ngModel)]="item.selected">D.{{item.D}}<br>
+    <input type="radio"name="{{item.id}}" value="E"[(ngModel)]="item.selected">E.{{item.E}}<br>
+    </div>
+  </div>
+</div>
+<div>&nbsp;   
+    <button class="btn btn-primary">Submit Quiz</button>
+</div>
+</form>
+
